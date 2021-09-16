@@ -1,0 +1,72 @@
+* {
+    margin: 0; padding: 0;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    color: wheat;
+    user-select: none;
+    transition: 0.2s;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    width: 100vw; height: 100vh;
+}
+
+.top-container {
+    flex-grow: 1;
+    display: flex;
+    text-overflow: ellipsis;
+}
+
+.top-container div {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 180px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px; height: 210px;
+    border: 5px solid wheat;
+    border-radius: 50%;
+    cursor: pointer;
+} .button:active {
+    transform: scale(0.9);
+}
+
+.number-container {
+    max-width: 50%;
+}
+
+#number {
+    font-size: 520px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    font-size: 48px;
+}
+
+#by-value {
+    width: 120px; height: auto;
+    border: none;
+    border-bottom: 2px solid wheat;
+    font-size: 48px;
+} #by-value:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
