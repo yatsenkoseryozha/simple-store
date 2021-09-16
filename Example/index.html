@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://github.com/yatsenkoseryozha/simple-store/blob/main/icon.png" type="image/png">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://github.com/yatsenkoseryozha/simple-store/releases/download/v1.0/simple-store.js"></script>
+    <title>Example</title>
+</head>
+<body>
+    <div class="app-container">
+        <div class="top-container">
+            <div><span class="button" onclick="decrease()">-</span></div>
+            <div class="number-container"><span id="number"></span></div>
+            <div><span class="button" onclick="increase()">+</span></div>
+        </div>
+        <div class="bottom-container">
+            <label>by value <input type="number" id="by-value" style="text-align:center"></label>
+        </div>
+    </div>
+    <script src="./js/reducers/main-reducer.js"></script>
+    <script src="./js/store.js"></script>
+    <script src="./js/subscribers/main-subscriber.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
