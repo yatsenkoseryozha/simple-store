@@ -8,7 +8,7 @@
 ## Подключение библиотеки
 Подключаем как внешний скрипт внутри тега `<head>` файла __index.html__:
 ```javascript
-<script src="https://github.com/yatsenkoseryozha/simple-store/releases/download/v1.0/simple-store.js"></script>
+<script src="https://yatsenkoseryozha.github.io/simple-store/simple-store.js"></script>
 ```
 Инициализируем экземпляр _Store_:
 ```javascript
