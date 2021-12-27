@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" type="image/x-icon" />
+    <title>Simple Store</title>
+    <style>
+        html {
+            width: 100%; height: 100%;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            width: 100%; height: 100%;
+            padding: 20px; margin: 0;
+            background-color: #000000;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 21px;
+            font-weight: 200;
+            color: #FFFFFF;
+        }
+
+        .header {
+            font-size: 48px;
+        }
+
+        .main {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; height: auto;
+        }
+
+        .copied {
+            position: absolute;
+            bottom: -120px;
+            opacity: 0;
+            color: #e2d844;
+            transition: all 200ms;
+        }
+
+        .link-container {
+            position: absolute;
+            z-index: 10;
+            max-width: 100%; height: auto;
+            text-decoration: underline;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 200ms;
+        } .link-container:hover {
+            color: #808080;
+        }
+
+        #link {
+            position: absolute;
+            width: 638px; height: 16px;
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Simple Store</div>
+    <div class="main">
+        <div class="link-container" id="link-container">
+            &ltscript src="https://yatsenkoseryozha.github.io/simple-store/simple-store.js"&gt&lt/script&gt
+        </div>
+        <textarea id="link"><script src="https://yatsenkoseryozha.github.io/simple-store/simple-store.js"></script></textarea>
+        <div class="copied" id="copied">copied!</div>
+    </div>
+    <div class="footer">2021</div>
+    <script>
+        document.getElementById("link-container").addEventListener("click", () => {
+            document.getElementById("link").select();
+            document.execCommand("copy");
+
+            document.getElementById("copied").style.opacity = 1
+        })
+    </script>
+</body>
+
+</html>
